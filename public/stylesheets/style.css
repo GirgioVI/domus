@@ -9,18 +9,19 @@ body {
 .header {
   width: 100%;
   font-size: 30px;
-  text-align: center;
   background-color: aquamarine;
 }
 
 .title {
   width: 100%;
   text-align: center;
+  position: relative;
 }
 
 .title h1 {
   color: black;
 }
+
 
 .content {
   width: 100%;
@@ -32,13 +33,12 @@ body {
   margin: 20px auto;
   display: flex;
   position: relative;
- 
 }
 
 .gallery {
   display: flex;
   transition: transform 0.5s ease;
-  margin-left: 24%;
+  margin-left: 20%;
 }
 
 #active{
@@ -47,7 +47,7 @@ body {
 }
 
 .gallery img {
-  width: 65%;
+  width: 70%;
   height: auto;
   margin: 0 15px;
   opacity: 0.7;
@@ -97,12 +97,9 @@ body {
 
 @media (max-width: 768px) {
   .header {
-    grid-template-columns: 1fr; /* Un'unica colonna su schermi più piccoli */
-    font-size: 24px; /* Riduci la dimensione del font */
-  }
-
-  .button-header {
-    padding: 8px; /* Riduci il padding dei pulsanti */
+    grid-template-columns: 1fr;
+    font-size: 24px;
+    text-align: center;
   }
 
   .gallery{
@@ -134,10 +131,7 @@ body {
 @media (max-width: 480px) {
   .header {
     font-size: 20px; /* Ulteriore riduzione della dimensione del font */
-  }
-
-  .button-header {
-    padding: 6px; /* Ulteriore riduzione del padding */
+    width: 100%;
   }
 
   .gallery img {
