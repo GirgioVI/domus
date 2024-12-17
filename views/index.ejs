@@ -67,21 +67,6 @@ function moveSlide(direction) {
   
 }
 
-function moveSlideSmall(direction) {
-  const images = document.querySelectorAll('.gallery img');
-  const totalImages = images.length;
-  
-  currentIndex = (currentIndex + direction + totalImages) % totalImages;
-
-  images.forEach((img) => img.classList.remove('active'));
-  images.forEach((img) => img.id="nonActive");
-
-  images[currentIndex].classList.add('active');
-  images[currentIndex].id="active";
-
-  const gallery = document.querySelector('.gallery');
-  gallery.style.transform = `translateX(-${(currentIndex) * (images[0].width)}px)`;
-}
 
 </script>
 
