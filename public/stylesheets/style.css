@@ -1,0 +1,153 @@
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.header {
+  width: 100%;
+  font-size: 30px;
+  text-align: center;
+  background-color: aquamarine;
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+}
+
+.title h1 {
+  color: black;
+}
+
+.content {
+  width: 100%;
+}
+
+.gallery-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto;
+  display: flex;
+  position: relative;
+ 
+}
+
+.gallery {
+  display: flex;
+  transition: transform 0.5s ease;
+  margin-left: 24%;
+}
+
+#active{
+  opacity: 1;
+  transform: scale(1);
+}
+
+.gallery img {
+  width: 65%;
+  height: auto;
+  margin: 0 15px;
+  opacity: 0.7;
+  transform: scale(0.8);
+  border-radius: 5%;
+}
+
+.gallery img.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.gallery-container button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2em;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 10%;
+  transition: all 0.3s;
+}
+
+.gallery-container button:hover {
+  background: rgba(0, 0, 0, 1);
+  scale: 1.1;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.table{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .header {
+    grid-template-columns: 1fr; /* Un'unica colonna su schermi più piccoli */
+    font-size: 24px; /* Riduci la dimensione del font */
+  }
+
+  .button-header {
+    padding: 8px; /* Riduci il padding dei pulsanti */
+  }
+
+  .gallery{
+    margin-left: 5%;
+  }
+
+  .gallery img {
+    width: calc(100% - 30px); /* Immagini a larghezza piena */
+    margin: 0; /* Rimuovi il margine laterale */
+  }
+
+  .gallery-container {
+    margin: 10px; /* Riduci il margine della galleria */
+  }
+
+  .gallery-container button {
+    font-size: 1.5em; /* Riduci la dimensione del font dei pulsanti */
+    padding: 8px; /* Riduci il padding dei pulsanti */
+  }
+
+  .table{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    font-size: 20px; /* Ulteriore riduzione della dimensione del font */
+  }
+
+  .button-header {
+    padding: 6px; /* Ulteriore riduzione del padding */
+  }
+
+  .gallery img {
+    width: calc(100% - 30px); /* Larghezza dell'immagine con margine */
+    margin: 0 auto; /* Centra l'immagine */
+  }
+
+  .gallery-container button {
+    font-size: 1.2em; /* Ulteriore riduzione della dimensione del font dei pulsanti */
+    padding: 6px; /* Ulteriore riduzione del padding dei pulsanti */
+  }
+}
+
